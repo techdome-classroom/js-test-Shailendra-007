@@ -3,7 +3,7 @@
  * @return {number}
  */
 var romanToInt = function(s) {
-    const mapNum = {
+   const mapNum = {
             'I': 1,
             'V': 5,
             'X': 10,
@@ -16,7 +16,6 @@ var romanToInt = function(s) {
         for (let i = 0; i < s.length; i++) {
             const curr = mapNum[s[i]];
             const val = mapNum[s[i + 1]];
-    
             if (val > curr) {
                 res += val - curr;
                 i++;
@@ -26,6 +25,5 @@ var romanToInt = function(s) {
         }
         return res;
 };
-
 
 module.exports={romanToInt}
